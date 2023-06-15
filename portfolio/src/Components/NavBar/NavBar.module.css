@@ -1,0 +1,66 @@
+.nav {
+    background-color: #ffd700; /* Color amarillo pastel */
+    padding: 10px;
+    font-weight: bold; /* Tipografía más gruesa */
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    margin: 0 10px;
+  }
+  
+  .nav li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav li a:hover {
+    text-shadow: #333 0 0 10px;
+    color: #828080; /* Color rojo para resaltar en el hover */
+  }
+  
+  /* Estilos para pantallas de hasta 768px de ancho */
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav li {
+      margin: 10px 0;
+    }
+  }
+  
+  /* Estilos para pantallas de hasta 480px de ancho */
+  @media (max-width: 480px) {
+    .nav {
+      padding: 5px;
+      font-size: 14px;
+    }
+  
+    .nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+  
+    .nav li {
+      margin: 5px 0;
+    }
+  }
+  

@@ -1,13 +1,59 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+  background-color: #fdf6e3; /* Cambia el color de fondo a un tono pastel */
+  color: #333333; /* Cambia el color de texto a gris oscuro */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #ffbf00; /* Utiliza el color amarillo dorado para los títulos */
+}
+
+h2 {
+  font-size: 3rem;
+  color: #ffbf00; /* Utiliza el color amarillo dorado para los títulos */
+}
+
+h3 {
+  font-size: 2.5rem;
+  color: #ffbf00; /* Utiliza el color amarillo dorado para los títulos */
+}
+
+h4 {
+  font-size: 2rem;
+  color: #ffbf00; /* Utiliza el color amarillo dorado para los títulos */
+}
+
+h5 {
+  font-size: 1.5rem;
+  color: #ffbf00; /* Utiliza el color amarillo dorado para los títulos */
+}
+
+h6 {
+  font-size: 1rem;
+  color: #ffbf00; /* Utiliza el color amarillo dorado para los títulos */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  color: #333333; /* Cambia el color de los enlaces a gris oscuro */
+}
+
+a:hover {
+  color: #ffbf00; /* Cambia el color de los enlaces al pasar el cursor a amarillo dorado */
 }
