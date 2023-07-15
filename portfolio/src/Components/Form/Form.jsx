@@ -1,49 +1,58 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useFormik } from 'formik';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
+import styles from './Form.module.css'; // Reemplaza "Form" con el nombre de tu componente
 
 const Form = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Realiza las acciones necesarias con los datos del formulario (por ejemplo, enviar una solicitud, actualizar el estado, etc.)
-    console.log('Name:', name);
-    console.log('Email:', email);
-    // Limpia los campos del formulario
-    setName('');
-    setEmail('');
-  };
+  // Resto del código del componente...
 
   return (
     <>
-    <NavBar />
-    <div>
-      <h1>Contact Form</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" value={name} onChange={handleNameChange} />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" value={email} onChange={handleEmailChange} />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-    <Footer />
+      <NavBar />
+      <div className={styles.container}>
+        <h1 className={styles.title}>Contact Form</h1>
+        <form onSubmit={formik.handleSubmit}>
+          <div className={styles.formGroup}>
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              className={styles.input}
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              className={styles.input}
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formik.values.message}
+              onChange={formik.handleChange}
+              className={styles.textarea}
+            />
+          </div>
+          <button type="submit" className={styles.button}>
+            Submit
+          </button>
+        </form>
+      </div>
+      <Footer />
     </>
   );
-}
+};
 
 export default Form;

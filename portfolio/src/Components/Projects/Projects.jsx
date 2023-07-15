@@ -9,13 +9,15 @@ const Projects = () => {
     {
       id: 1,
       title: "Project 1",
-      description: "This is the description of Project 1."
+      description: "This is the description of Project 1.",
+      tecnologías: "Iconos",
     },
     {
       id: 2,
       title: "Project 2",
-      description: "This is the description of Project 2."
-    }
+      description: "This is the description of Project 2.",
+      tecnologías: "Iconos",
+    },
     // Agrega más proyectos aquí
   ];
 
@@ -23,7 +25,7 @@ const Projects = () => {
     opacity: 1,
     transform: "translateY(0px)",
     from: { opacity: 0, transform: "translateY(20px)" },
-    delay: 200
+    delay: 200,
   });
 
   return (
@@ -41,6 +43,9 @@ const Projects = () => {
               <h2 className={styles.projectTitle}>{projects[index].title}</h2>
               <p className={styles.projectDescription}>
                 {projects[index].description}
+              </p>
+              <p className={styles.projectTecnologias}>
+                {projects[index].tecnologías}
               </p>
             </animated.div>
           ))}
