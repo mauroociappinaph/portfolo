@@ -1,0 +1,30 @@
+
+.nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .li {
+    margin: 0 15px;
+  }
+  
+  .link {
+    color: #ffbf00; /* cambiamos el color del texto a amarillo */
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #ff6347; /* cambiamos el color del texto al pasar el ratón a un rojo salmón */
+  }
+  

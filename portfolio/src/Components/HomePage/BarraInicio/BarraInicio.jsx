@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
+import styles from './BarraInicio.module.css';
 
 function BarraInicio() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/projects">Projects</Link>
+    <nav className={styles.nav}>
+      <ul className={styles.ul}>
+        <li className={styles.li}>
+          <Link className={styles.link} to="/projects">Projects</Link>
         </li>
-        <li>
-          <Link to="/skills">Skills</Link>
+        <li className={styles.li}>
+          <Link className={styles.link} to="/skills">Skills</Link>
         </li>
-        <li>
-          <Link to="/about">About</Link>
+        <li className={styles.li}>
+          <Link className={styles.link} to="/about">About</Link>
         </li>
-        <li>
-          <Link to="/form">Form</Link>
+        <li className={styles.li}>
+          <Link className={styles.link} to="/form">Form</Link>
         </li>
       </ul>
     </nav>
