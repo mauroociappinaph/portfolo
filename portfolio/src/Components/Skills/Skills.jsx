@@ -6,7 +6,7 @@ const skills = [
   {
     name: 'JavaScript',
     description: 'Un lenguaje de programación interpretado que es fundamental para el desarrollo web.',
-    icon_path: '/path/to/javascript_icon.png',
+    icon_path: '../../asset/js.png',
   },
   {
     name: 'Next.js',
