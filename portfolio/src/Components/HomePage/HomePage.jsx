@@ -1,29 +1,15 @@
-import React, { useEffect, useReducer, useRef } from "react"; // import useRef
-import styles from "./HomePage.module.css";
+import React, { useEffect, useReducer, useRef } from "react";
+import styles from "../HomePage/HomePage.module.css";
 import BarraInicio from "./BarraInicio/BarraInicio";
-
-const initialState = {
-  typingEffect: true,
-  title: ""
-};
-
-function reducer(state, action) {
-  switch (action.type) {
-    case "SET_TYPING_EFFECT":
-      return { ...state, typingEffect: action.payload };
-    case "SET_TITLE":
-      return { ...state, title: action.payload };
-    default:
-      return state;
-  }
-}
+import { initialState, reducer } from "../../reducer/reducer";
+import { setTypingEffect, setTitle } from "../../actions/actions";
 
 const HomePage = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const titleRef = useRef(state.title); // create a ref
+  const titleRef = useRef(state.title);
 
   useEffect(() => {
-    titleRef.current = state.title; // update the ref every time state.title changes
+    titleRef.current = state.title;
   }, [state.title]);
 
   useEffect(() => {
@@ -38,7 +24,7 @@ const HomePage = () => {
 
     const typingInterval = setInterval(() => {
       if (index < text.length) {
-        dispatch({ type: "SET_TITLE", payload: titleRef.current + text[index] });
+        dispatch(setTitle(titleRef.current + text[index]));
         index++;
       } else {
         clearInterval(typingInterval);
