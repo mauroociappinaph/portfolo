@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect, useReducer, useRef } from "react"; // import useRef
 import styles from "./HomePage.module.css";
 import BarraInicio from "./BarraInicio/BarraInicio";
 
@@ -20,6 +20,11 @@ function reducer(state, action) {
 
 const HomePage = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const titleRef = useRef(state.title); // create a ref
+
+  useEffect(() => {
+    titleRef.current = state.title; // update the ref every time state.title changes
+  }, [state.title]);
 
   useEffect(() => {
     if (state.typingEffect) {
@@ -33,11 +38,10 @@ const HomePage = () => {
 
     const typingInterval = setInterval(() => {
       if (index < text.length) {
-        dispatch({ type: "SET_TITLE", payload: state.title + text[index] });
+        dispatch({ type: "SET_TITLE", payload: titleRef.current + text[index] });
         index++;
       } else {
         clearInterval(typingInterval);
-        dispatch({ type: "SET_TYPING_EFFECT", payload: false });
       }
     }, 100);
   };
