@@ -1,0 +1,23 @@
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    margin-right: 0.5rem;
+  }
+  
+  .socialIcon {
+    color: #333;
+    font-size: 20px;
+  }
+  

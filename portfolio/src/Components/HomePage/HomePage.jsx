@@ -3,6 +3,7 @@ import styles from "../HomePage/HomePage.module.css";
 import BarraInicio from "./BarraInicio/BarraInicio";
 import { initialState, reducer } from "../../reducer/reducer";
 import { setTypingEffect, setTitle } from "../../actions/actions";
+import SocialMediaLinks from "../SocialMediaIcons/SocialMediaIcons";
 
 const HomePage = () => {
   // Inicializa el estado y la función dispatch usando el reducer
@@ -44,6 +45,7 @@ const HomePage = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>{state.title}</h1>
       <BarraInicio />
+      <SocialMediaLinks className={styles.socialLinks}/>
     </div>
   );
 };

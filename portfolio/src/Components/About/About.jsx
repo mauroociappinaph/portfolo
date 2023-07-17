@@ -3,7 +3,9 @@ import NavBar from '../NavBar/NavBar';
 import Avatar from 'react-avatar';
 import styles from './About.module.css';
 import Footer from '../Footer/Footer';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import SocialMediaLinks from '../SocialMediaIcons/SocialMediaIcons';
+
+
 
 const About = () => {
   return (
@@ -18,24 +20,7 @@ const About = () => {
             round={true}
             className={styles.avatar}
           />
-          <div className={styles.socialLinks}>
-            <a
-              href="https://www.linkedin.com/in/maurojoseciappina/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-            >
-              <FaLinkedin className={styles.socialIcon} />
-            </a>
-            <a
-              href="https://github.com/mauroociappinaph"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-            >
-              <FaGithub className={styles.socialIcon} />
-            </a>
-          </div>
+         <SocialMediaLinks />
         </div>
         <div className={styles.content}>
           <h1>About</h1>
